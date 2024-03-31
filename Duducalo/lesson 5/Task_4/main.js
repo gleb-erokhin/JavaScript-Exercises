@@ -36,23 +36,21 @@ let index = 0
 // Ученик 1
 {
   index++
-  let studentName = "Маша"
-  let studentYear = 2010
+  let studentName = prompt(`Enter the student Name ${index}`)
+  let studentYear = Number(prompt(`Enter the student year of birthd ${index}`))
   printStudent(index, studentName, studentYear)
 }
 
 // Ученик 2
 {
   index++
-  let studentName = "Рита"
-  let studentYear = 2009
+  let studentName = prompt(`Enter the student Name ${index}`)
+  let studentYear = Number(prompt(`Enter the student year of birthd ${index}`))
   printStudent(index, studentName, studentYear)
 }
 
-// Ученик 3
+// Ученик 3 (вариант ввода)
 {
   index++
-  let studentName = "Вася"
-  let studentYear = 2007
-  printStudent(index, studentName, studentYear)
+  printStudent(index, prompt(`Enter the student Name ${index}`), Number(prompt(`Enter the student year of birthd ${index}`)))
 }
