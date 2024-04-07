@@ -20,18 +20,37 @@ function dw(text) {
   document.write(text)
 }
 
+// Вариант 1 (самый простой)
+// dw("<h1>Список студентов</h1>")
+
+// dw("<ul>")
+// index++
+// dw(getUserLi(index, "Наташа", 2011))
+// index++
+// dw(getUserLi(index, "Петр", 2015))
+// index++
+// dw(getUserLi(index, "Миша", 2014))
+// index++
+// dw(getUserLi(index, "Рита", 2010))
+// index++
+// dw(getUserLi(index, "Елена", 2015))
+
+// dw("</ul>")
+
+// Вариант 2 (созданием дополнительной функции для учета)
+function getIndex() {
+  index++;
+  return index;
+}
+
 dw("<h1>Список студентов</h1>")
 
 dw("<ul>")
-index++
-dw(getUserLi(index, "Наташа", 2011))
-index++
-dw(getUserLi(index, "Петр", 2015))
-index++
-dw(getUserLi(index, "Миша", 2014))
-index++
-dw(getUserLi(index, "Рита", 2010))
-index++
-dw(getUserLi(index, "Елена", 2015))
+
+dw(getUserLi(getIndex(), "Наташа", 2011))
+dw(getUserLi(getIndex(), "Петр", 2015))
+dw(getUserLi(getIndex(), "Миша", 2014))
+dw(getUserLi(getIndex(), "Рита", 2010))
+dw(getUserLi(getIndex(), "Елена", 2015))
 
 dw("</ul>")
