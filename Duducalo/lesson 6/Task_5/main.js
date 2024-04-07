@@ -51,6 +51,14 @@ function getAge(year) {
 }
 
 // Функция, возвращающая HTML-элемент Li - карточку питомца
+/**
+ * 
+ * @param {number} index Порядковае значение строки, счетчик
+ * @param {string} name Имя животного
+ * @param {number} weight Вес животного
+ * @param {number} year год рождения животного
+ * @returns Возвращает строку в HTML-шаблоне li, с указанием всех значений переданных в функцию. Используется для доплнительных вычислений внешнии функции.
+ */
 function getPetInfoLi(index, name, weight, year) {
   return  ` <li class="list__item">
                 ${getH2(`${index}. ${name}`, "list__title")}
