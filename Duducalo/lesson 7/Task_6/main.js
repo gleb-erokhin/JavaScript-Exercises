@@ -44,7 +44,7 @@ function getNewStudent(name) {
     // 3) Значение, которое будет введено в текстовом поле по умолчанию, сейчас туда добавлен nameSpan.textContent
 
     let newName = prompt("Введите новое имя", nameSpan.textContent)
-    nameSpan.textContent = ""
+    nameSpan.textContent = newName;
   }
 
   let removeBtn = getButton("Удалить", "student-item__btn")
