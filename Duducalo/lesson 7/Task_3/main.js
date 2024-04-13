@@ -55,3 +55,49 @@ document.write(`<li class="list__item">
                     Учусь создавать HTML - элементы с помощью встроенных функций
                   </p>
                 </li>`)
+
+document.write("</ul>")
+
+// Изменение кода
+let index = 0;
+
+let container = document.createElement('div');
+container.classList.add('container')
+
+let title = document.createElement('h1');
+title.classList.add('main-title');
+title.textContent = "Достижения в изучении Javascript"
+
+let ulList = document.createElement('ul');
+ulList.classList.add('list')
+
+function addLi(index, text) {
+  let li = document.createElement('li')
+  let span = document.createElement('span')
+  let p = document.createElement('p')
+
+  li.classList.add('list__item');
+  span.classList.add('list__index');
+  p.classList.add('list__desc');
+  span.textContent = `${index}`;
+  p.textContent = `${text}`
+
+  ulList.append(li)
+  li.append(span)
+  li.append(p)
+}
+
+index++
+let item1 = addLi(index, "Знаю, что такое вывод и ввод информации")
+index++
+let item2 = addLi(index, "Знаю о способах вывода информации")
+index++
+let item3 = addLi(index, "Знаю, что такое числа, строки, и переменные")
+index++
+let item4 = addLi(index, "Умею создавать функции и пользоваться ими")
+index++
+let item5 = addLi(index, "Учусь создавать HTML - элементы с помощью встроенных функций")
+
+document.body.append(container)
+container.append(title)
+container.append(ulList)
