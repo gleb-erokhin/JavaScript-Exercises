@@ -42,7 +42,25 @@ let inputAge = document.createElement('input');
 inputAge.placeholder = "Enter the age"
 inputAge.type = 'number'
 
+// кнопка
 let addButton = document.createElement('button');
 addButton.textContent = 'Enter user'
 
+// список
+let ulList = document.createElement('ul');
+
+// событие по клику добавление строки
+addButton.onclick = function () {
+  let incomingText = inputName.value;
+  let incomingAge = inputAge.value;
+
+  let listItem = document.createElement('li')
+  listItem.textContent = `${incomingText}, возраст: ${incomingAge}`
+  ulList.append(listItem)
+  
+  inputName.value = "";
+  inputAge.value = "";
+}
+
 document.body.append(inputName, inputAge, addButton)
+document.body.append(ulList)
