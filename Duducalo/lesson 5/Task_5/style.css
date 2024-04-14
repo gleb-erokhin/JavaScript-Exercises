@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(127, 197, 127);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+
+.list__items {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.list__item {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.list__total {
+    background-color: #0f4c0a;
+    color: white;
+}
