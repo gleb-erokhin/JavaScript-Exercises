@@ -48,6 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 150px;
     min-height: 150px;
     background-color: rgba(230, 225, 225, 0.8);
     padding: 15px;
