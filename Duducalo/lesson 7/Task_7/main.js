@@ -46,14 +46,15 @@ let removeBtn = getButton("Удалить", "remove")
 addtaskBtn.onclick = function () {
     let inputText = input.value
     let listItem = createEl("li", "input-list__items")
-    listItem.textContent = `${inputText}`
+    let paragraf = createEl("p", "text")
+    paragraf.textContent = `${inputText}`
     // console.log(listItem);
     
     doneBtn = getButton("Выполнено", "btn")
     changeBtn = getButton("изменить", "change")
     removeBtn = getButton("Удалить", "remove")
 
-    listItem.append(doneBtn, changeBtn, removeBtn)
+    listItem.append(paragraf, doneBtn, changeBtn, removeBtn)
     taskList.append(listItem)
 
     input.value = ""
@@ -65,6 +66,12 @@ addtaskBtn.onclick = function () {
         changeBtn.remove();
         doneBtn.remove();
         console.log(find);
+    }
+
+    changeBtn.onclick = function () {
+        const change = document.querySelector('.text');
+        change.textContent = `test`
+        console.log(change);
     }
 
     removeBtn.onclick = function () {
