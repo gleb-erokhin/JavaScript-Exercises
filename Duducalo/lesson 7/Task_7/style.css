@@ -54,4 +54,10 @@ body {
     border-radius: 15px;
     list-style: none;
     margin-bottom: 25px;
+
 }
+
+.input-list__items_done {
+    background-color: rgba(10, 245, 10, 0.8);
+}
+

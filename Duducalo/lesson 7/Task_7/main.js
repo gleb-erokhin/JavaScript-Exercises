@@ -38,23 +38,36 @@ input.type = "text";
 
 // создать кнопку для добавления задач
 let addtaskBtn = getButton("Add task", "add")
+let doneBtn = getButton("Выполнено", "done")
+let changeBtn = getButton("изменить", "change")
+let removeBtn = getButton("Удалить", "remove")
 
 // добавление задачи
 addtaskBtn.onclick = function () {
     let inputText = input.value
     let listItem = createEl("li", "input-list__items")
     listItem.textContent = `${inputText}`
-    console.log(listItem);
+    // console.log(listItem);
     
-    let doneBtn = getButton("Выполнено", "done")
-    let changeBtn = getButton("изменить", "change")
-    let removeBtn = getButton("Удалить", "remove")
+    doneBtn = getButton("Выполнено", "btn")
+    changeBtn = getButton("изменить", "change")
+    removeBtn = getButton("Удалить", "remove")
 
     listItem.append(doneBtn, changeBtn, removeBtn)
     taskList.append(listItem)
 
     input.value = ""
+
+    // кнопка Выполнено
+    doneBtn.onclick = function () {
+        const find = document.querySelector('.input-list__items')
+        find.classList.add('input-list__items_done')
+        changeBtn.remove();
+        doneBtn.remove();
+        console.log(find);
+    }
 }
+
 
 document.body.append(main)
 main.append(container)
