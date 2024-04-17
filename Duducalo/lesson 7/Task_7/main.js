@@ -68,19 +68,21 @@ addtaskBtn.onclick = function () {
         console.log(find);
     }
 
+    // кнопка изменить
     changeBtn.onclick = function () {
         const change = document.querySelector('.text');
-        change.textContent = `test`
+        change.textContent = prompt('Введите новый текст')
         console.log(change);
     }
 
+    // кнопка удалить
     removeBtn.onclick = function () {
         const del = document.querySelector('.input-list__items')
         del.remove();
     }
 }
 
-
+// формирование структуры страницы
 document.body.append(main)
 main.append(container)
 container.append(blockInput, taskList)

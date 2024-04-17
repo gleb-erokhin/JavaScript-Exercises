@@ -1,9 +1,13 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: rgba(6, 181, 6, 0.839);
+    box-sizing: border-box;
 }
 
 .main {
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 .container {
@@ -54,10 +58,16 @@ body {
     border-radius: 15px;
     list-style: none;
     margin-bottom: 25px;
-
 }
 
 .input-list__items_done {
     background-color: rgba(10, 245, 10, 0.8);
+}
+
+.text {
+    width: 150px;
+    min-height: 55px;
+    margin: 0;
+    overflow-wrap: break-word;
 }
 
