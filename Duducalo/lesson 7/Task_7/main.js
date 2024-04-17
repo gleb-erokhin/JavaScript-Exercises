@@ -66,6 +66,11 @@ addtaskBtn.onclick = function () {
         doneBtn.remove();
         console.log(find);
     }
+
+    removeBtn.onclick = function () {
+        const del = document.querySelector('.input-list__items')
+        del.remove();
+    }
 }
 
 
