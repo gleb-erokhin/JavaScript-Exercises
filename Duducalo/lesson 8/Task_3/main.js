@@ -11,14 +11,12 @@
 // Функция возвращает карточку названия и суммарной стоимости товара
 function getProductCard(product, totalPrice, className = "") {
   let productCard = document.createElement("h1")
+  productCard.classList.add("product-card")
 
   // Если className равен "discount", меняем стиль карточки, что бы показать примененную скидку
   if (className === "discount") {
-    productCard.classList.add("product-card")
     productCard.classList.add("discount")
-  } else {
-    productCard.classList.add("product-card")
-  }
+  } 
 
   productCard.textContent = `Общая стоимость "${product}" - ${totalPrice} рублей`
   return productCard
@@ -36,10 +34,8 @@ if (totalPrice >= 3000 && count > 3) {
     // Применяем скидку 500 рублей
     let discountPrice = totalPrice - 500
     // Создаем карточку
-    let card = getProductCard(product, discountPrice, "discount")
-    document.body.append(card)
+    document.body.append(getProductCard(product, discountPrice, "discount"))
   } else {
   // Создаем карточку
-  let card = getProductCard(product, totalPrice)
-  document.body.append(card)
+    document.body.append(getProductCard(product, totalPrice))
 }
