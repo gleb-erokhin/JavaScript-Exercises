@@ -32,20 +32,13 @@ let price = Number(prompt("Введите стоимость товара"))
 let totalPrice = count * price // Расчет суммарной стоимости покупки
 
 // Проверка условий скидки
-if (totalPrice >= 3000) {
-  if (count > 3) {
+if (totalPrice >= 3000 && count > 3) {
     // Применяем скидку 500 рублей
     let discountPrice = totalPrice - 500
-
     // Создаем карточку
     let card = getProductCard(product, discountPrice, "discount")
     document.body.append(card)
   } else {
-    // Создаем карточку
-    let card = getProductCard(product, totalPrice)
-    document.body.append(card)
-  }
-} else {
   // Создаем карточку
   let card = getProductCard(product, totalPrice)
   document.body.append(card)
